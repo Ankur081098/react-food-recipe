@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 const Search = () => {
-  const [query, setQuery] = useState("Biryani");
+  const [query, setQuery] = useState("Paneer");
 
   const [data, setData] = useState([]);
   const [isClicked, setIsClicked] = useState(false);
@@ -17,7 +17,7 @@ const Search = () => {
         const arrayData = data.hits;
         setData(arrayData);
       });
-  }, [isClicked]);
+  },  [query ,isClicked]);
 
   return (
     <div>
@@ -42,7 +42,7 @@ const Search = () => {
         {data.map((item, i) => {
           return (
             <div key={i} className="display-cards">
-              <img src={item.recipe.image} className="images" /> <br />
+              <img src={item.recipe.image} className="images" alt="no food image"/> <br />
               <h4>{item.recipe.label}</h4>
             </div>
           );
