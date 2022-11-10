@@ -42,7 +42,7 @@ const Search = () => {
         {data.map((item, i) => {
           return (
             <div key={i} className="display-cards">
-              <img src={item.recipe.image} className="images" alt="no food image"/> <br />
+              <img src={item.recipe.image} className="images" alt="food"/> <br />
               <h4>{item.recipe.label}</h4>
             </div>
           );
